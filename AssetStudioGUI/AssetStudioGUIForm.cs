@@ -1613,6 +1613,9 @@ namespace AssetStudioGUI
         {
             FMODreset();
 
+            // HACK: Disable FMOD
+            return;
+
             var result = FMOD.Factory.System_Create(out system);
             if (ERRCHECK(result)) { return; }
 
